@@ -1,0 +1,485 @@
+
+/******CSS-Reset******/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Playfair", serif;
+}
+
+/******Colors******/
+
+:root {
+    --darkGray: #191919;
+    --lightGray: #2A292B;
+    --fontColor: #E9D2A0;
+    --navColor: #262321;
+}
+
+/******Default******/
+
+.bold {
+    font-weight: bold;
+}
+
+section:not(#Form) {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem;
+}
+
+.textBox {
+    width: 60%;
+    margin: auto 0;
+}
+
+.imageBox {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+img:not(.close) {
+    width: 25vw;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border: 2px solid var(--fontColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, p {
+    color: var(--fontColor);
+}
+
+#Home, #Works, #Reactions {
+    background-color: var(--darkGray);
+}
+
+#AboutMe, #Articles, #Contact {
+    background-color: var(--lightGray);
+}
+
+h3 {
+    font-size: 2.2rem;
+    font-weight: lighter;
+    text-shadow: 1px 1px 1px black;
+}
+
+p {
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    text-shadow: 1px 1px 1px black;
+}
+
+.line {
+    background-color: var(--fontColor);
+    width: 70%;
+    height: 1px;
+    margin-top: -.3rem;
+}
+
+button, .btn {
+    width: 8rem;
+    height: 4rem;
+    background-color: var(--fontColor);
+    color: var(--darkGray);
+    font-size: 1.2rem;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+button {
+    border-radius: 60px;
+    width: 10rem;
+    border: none;
+    outline: none;
+    font-family: "Playfair", serif;
+    transition: all .5s;
+}
+
+button:hover, .btn:hover {
+    cursor: pointer;
+    background-color: var(--darkGray);
+    color: var(--fontColor);
+    outline: 1px solid var(--fontColor);
+}
+
+.hidden {
+    left: -100vw;
+}
+
+/******Nav-Section******/
+
+nav {
+    width: 100vw;
+    height: 3.3rem;
+    background-color: var(--navColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    background-color: var(--fontColor);
+    color: var(--darkGray);
+    padding: .3rem .5rem;
+    border-radius: 60px;
+    font-size: 1.2rem;
+}
+
+/******Home-Section******/
+
+#Home h1 {
+    font-size: 2.2rem;
+    font-weight: lighter;
+    margin-top: 1rem;
+}
+
+#Home .line {
+    margin-bottom: 9rem;
+}
+
+#Home h2, #Home h3 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    padding: 1.5rem 0;
+}
+
+#Home h3 {
+    margin-bottom: 3rem;
+}
+
+#Home .btn {
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 60px;
+    transition: all .5s;
+}
+
+/******AboutMe-Section******/
+
+#AboutMe {
+    display: flex;
+}
+
+#AboutMe .line {
+    margin-bottom: 1rem;
+}
+
+/******Articles-Section******/
+
+#Articles article {
+    display: flex;
+    padding: 4rem 0;
+}
+
+#Articles article:first-child .imageBox, #Articles article:last-child .imageBox {
+    justify-content: flex-start;
+}
+
+/******Works-Section******/
+
+#Works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#Works .works {
+    width: 100%;
+}
+
+#Works .works * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+#Works .works div {
+    background-color: var(--lightGray);
+    border-radius: 30px;
+    width: 80%;
+    height: 70vh;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border: 1px solid var(--fontColor);
+}
+
+#Works .works div button svg {
+    transition: all .5s;
+}
+
+#Works .works div button {
+    width: 4rem;
+    transition: all .5s;
+}
+
+#Works .works div button:hover svg {
+    fill: var(--fontColor);
+}
+
+#Works .works div button:first-child {
+    transform: rotate(180deg);
+}
+
+#Works .works div button svg {
+    width: 60px !important;
+    height: 60px !important;
+    color: var(--fontColor) !important;
+}
+
+#Works .works button {
+    margin: 2rem auto;
+}
+
+#Works .data {
+    width: 100%;
+}
+
+.cards {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--lightGray);
+    border: 1px solid var(--fontColor);
+    width: 15rem;
+    height: 18rem;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.card .circle {
+    font-size: 2.5rem;
+    border: 2px solid var(--fontColor);
+    width: 6.5rem;
+    height: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    border-radius: 100%;
+}
+
+.card p {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+/******Reactions-Section******/
+
+#Reactions h3, #Works h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+#Reactions button {
+    display: block;
+    margin: 4rem auto;
+}
+
+#Reactions .card {
+    background-color: var(--fontColor);
+}
+
+#Reactions .card p:first-child {
+    background-color: var(--lightGray);
+    border-radius: 20px;
+    padding: .5rem 1.5rem;
+    width: 90%;
+    height: 80%;
+    margin-top: .5rem;
+}
+
+#Reactions .card .name {
+    color: var(--darkGray);
+    font-size: 1.6rem;
+    padding: 0;
+}
+
+/******Contact-Section******/
+
+#Contact .line {
+    margin-bottom: 1rem;
+}
+
+#Contact {
+    display: flex;
+}
+
+#Contact .textBox button {
+    display: block;
+    margin: 4rem auto;
+}
+
+#Contact .links img {
+    width: 60px;
+    border-radius: 15px;
+    transition: all .5s;
+}
+
+#Contact .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 4rem 0;
+}
+
+#Contact .links a:hover img {
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/******Footer******/
+
+footer {
+    background-color: var(--navColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3.3rem;
+}
+
+/******Form-Section******/
+
+#Form {
+    width: 60vw;
+    height: 85vh;
+    background-image: url(../assets/images/popup.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.596);
+    background-blend-mode: overlay;
+    position: fixed;
+    left: 20vw;
+    left: -100vw;
+    top: 7.5vh;
+    padding: 2rem;
+    border-radius: 30px;
+    border: 1px solid var(--fontColor);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#Form h3, #Form p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Form .bold {
+    padding-bottom: 0;
+}
+
+#Form .inputContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
+#Form .inputContent label {
+    color: var(--fontColor);
+    width: 4rem;
+    font-size: 1.3rem;
+}
+
+#Form .inputContent input {
+    background-color: var(--darkGray);
+    width: 14rem;
+    height: 1.8rem;
+    border-radius: 10px;
+    border: 1px solid var(--lightGray);
+}
+
+#Form div:nth-child(3) {
+    flex-direction: column;
+    align-items: center;
+}
+
+#Form div:nth-child(3) textarea {
+    background-color: var(--darkGray);
+    border: none;
+    border-radius: 10px;
+    width: 24rem;
+    height: 6rem;
+}
+
+#Form button {
+    width: 10rem;
+    height: 3.5rem;
+    margin: 2rem auto;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+}
+
+#Form button svg {
+    background-color: var(--darkGray);
+    border-radius: 10px;
+    width: 2rem;
+    height: 2rem;
+    transform: rotate(90deg);
+}
+
+#Form .closeBtn {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    background-color: transparent;
+    border: 1px solid var(--fontColor);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 10px;
+}
+
+#Form .closeBtn img {
+    width: 2.5rem;
+    height: 2.5rem;
+}

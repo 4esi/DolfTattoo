@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/animation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="hidden">
             <ul>
                 <li><a href="#Home">Főoldal</a></li>
                 <li><a href="#AboutMe">Rólam</a></li>
@@ -196,9 +199,9 @@
         <!--*****Contact-Section*****-->
 
         <section id="Contact">
-            <h3>Lépj velem kapcsolatba</h3>
-            <div class="line"></div>
             <article class="textBox">
+                <h3>Lépj velem kapcsolatba</h3>
+                <div class="line"></div>
                 <p>
                     Szeretnél időpontot egyeztetni, kérdésed van, vagy csak megosztanád az ötleted? <span class="bold">Írj üzenetet, és felveszem veled a kapcsolatot, hogy megbeszélhessük a részleteket.</span>
                 </p>
@@ -254,6 +257,9 @@
                     </svg>
                 </button>
             </form>
+            <button class="closeBtn">
+                <img class="close" src="./assets/icons/close_24dp_E9D2A0_FILL0_wght400_GRAD0_opsz24.svg" alt="Bezárás gomb">
+            </button>
         </section>
     </main>
     <footer>
