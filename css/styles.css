@@ -47,7 +47,7 @@ section:not(#Form) {
 }
 
 img:not(.close) {
-    width: 25vw;
+    width: 22vw;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     border: 2px solid var(--fontColor);
@@ -98,7 +98,7 @@ button, .btn {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-button {
+button:not(.navBtn) {
     border-radius: 60px;
     width: 10rem;
     border: none;
@@ -114,8 +114,8 @@ button:hover, .btn:hover {
     outline: 1px solid var(--fontColor);
 }
 
-.hidden {
-    left: -100vw;
+html body .hidden {
+    left: -150% !important;
 }
 
 /******Nav-Section******/
@@ -143,12 +143,47 @@ nav ul li {
     list-style: none;
 }
 
+nav ul li a:hover {
+    background-color: var(--darkGray);
+    color: var(--fontColor);
+    outline: 1px solid var(--fontColor);
+}
+
 nav ul li a {
     background-color: var(--fontColor);
     color: var(--darkGray);
     padding: .3rem .5rem;
     border-radius: 60px;
     font-size: 1.2rem;
+    transition: all .5s;
+}
+
+.navBtn {
+    position: fixed;
+    top: 2rem;
+    left: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--darkGray);
+    border: 1px solid var(--fontColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+
+.navBtn svg {
+    width: 2rem;
+    height: 2rem;
+    transition: all .5s;
+}
+
+.navBtn:hover {
+    background-color: var(--fontColor);
+}
+
+.navBtn:hover svg {
+    fill: #191919;
 }
 
 /******Home-Section******/
@@ -384,6 +419,12 @@ footer {
     height: 3.3rem;
 }
 
+footer p {
+    padding: .1rem .2rem;
+    border: 1px solid var(--fontColor);
+    border-radius: 10px;
+}
+
 /******Form-Section******/
 
 #Form {
@@ -397,7 +438,6 @@ footer {
     background-blend-mode: overlay;
     position: fixed;
     left: 20vw;
-    left: -100vw;
     top: 7.5vh;
     padding: 2rem;
     border-radius: 30px;
