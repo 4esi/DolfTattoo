@@ -69,7 +69,7 @@ h1, h2, h3, p {
     background-color: var(--lightGray);
 }
 
-h3 {
+h2, h3 {
     font-size: 2.2rem;
     font-weight: lighter;
     text-shadow: 1px 1px 1px black;

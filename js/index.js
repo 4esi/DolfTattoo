@@ -8,9 +8,9 @@ const DomItems = {
     form: document.querySelector('form'),
     messageBtn: document.querySelector('.messageBtn'),
     closeBtn: document.querySelector('.closeBtn'),
-    caruselPic: document.querySelector('#caruselPic'),
+    carouselPic: document.querySelector('#carouselPic'),
     backPicBtn: document.querySelector('.backPic'),
-    forewardPicBtn: document.querySelector('.forewardPic'),
+    forwardPicBtn: document.querySelector('.forwardPic'),
     WorksAllBtn: document.getElementById('WorksAllBtn')
 }
 
@@ -26,8 +26,8 @@ function checkScreenSize() {
     }
 }
 
-window.addEventListener("resize", checkScreenSize);
-window.addEventListener("DOMContentLoaded", checkScreenSize);
+window.addEventListener('resize', checkScreenSize);
+window.addEventListener('DOMContentLoaded', checkScreenSize);
 
 //NavBtn open and close function
 
@@ -52,21 +52,21 @@ if(DomItems.closeBtn) {
     })
 }
 
-//Carusel function implement
+//Carousel function implement
 
 let currentImgIndex = 0;
 const imagePath = './assets/images/works/';
-DomItems.caruselPic.src = `${imagePath}${currentImgIndex}.jpg`;
+DomItems.carouselPic.src = `${imagePath}${currentImgIndex}.jpg`;
 
-if(DomItems.forewardPicBtn) {
-    DomItems.forewardPicBtn.addEventListener('click', () => {
+if(DomItems.forwardPicBtn) {
+    DomItems.forwardPicBtn.addEventListener('click', () => {
         if(currentImgIndex < 50) {
             currentImgIndex += 1;
-            DomItems.caruselPic.src = `${imagePath}${currentImgIndex}.jpg`;
+            DomItems.carouselPic.src = `${imagePath}${currentImgIndex}.jpg`;
         } else {
-            DomItems.forewardPicBtn.style.outline = '3px solid red';
+            DomItems.forwardPicBtn.style.outline = '3px solid red';
             setTimeout(() => {
-                DomItems.forewardPicBtn.style.outline = '1px solid var(--fontColor)';
+                DomItems.forwardPicBtn.style.outline = '1px solid var(--fontColor)';
             }, 180)
         }
         
@@ -77,7 +77,7 @@ if(DomItems.backPicBtn) {
     DomItems.backPicBtn.addEventListener('click', () => {
         if(currentImgIndex > 0) {
             currentImgIndex -= 1;
-            DomItems.caruselPic.src = `${imagePath}${currentImgIndex}.jpg`;
+            DomItems.carouselPic.src = `${imagePath}${currentImgIndex}.jpg`;
         } else {
             DomItems.backPicBtn.style.outline = '3px solid red';
             setTimeout(() => {
@@ -87,6 +87,3 @@ if(DomItems.backPicBtn) {
         
     })
 }
-
-
-
