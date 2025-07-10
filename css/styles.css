@@ -61,7 +61,7 @@ h1, h2, h3, p {
     color: var(--fontColor);
 }
 
-#Home, #Works, #Reactions {
+#Home, #Works, #Reviews,#ReviewsAll, #WorksAll {
     background-color: var(--darkGray);
 }
 
@@ -114,10 +114,6 @@ button:hover, .btn:hover {
     outline: 1px solid var(--fontColor);
 }
 
-html body .hidden {
-    left: -150% !important;
-}
-
 /******Nav-Section******/
 
 nav {
@@ -130,6 +126,9 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    transition: all .5s;
+    z-index: 2;
+    border-bottom: 1px solid var(--fontColor);
 }
 
 nav ul {
@@ -170,6 +169,7 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     transition: all .5s;
+    z-index: 3;
 }
 
 .navBtn svg {
@@ -247,6 +247,10 @@ nav ul li a {
     flex-wrap: wrap;
 }
 
+#Works div img {
+    max-height: 95%;
+}
+
 #Works .works {
     width: 100%;
 }
@@ -274,6 +278,7 @@ nav ul li a {
 #Works .works div button {
     width: 4rem;
     transition: all .5s;
+    outline: 1px solid var(--fontColor);
 }
 
 #Works .works div button:hover svg {
@@ -290,8 +295,10 @@ nav ul li a {
     color: var(--fontColor) !important;
 }
 
-#Works .works button {
-    margin: 2rem auto;
+#Works .btn {
+    width: 10rem;
+    border-radius: 40px;
+    transition: all .5s;
 }
 
 #Works .data {
@@ -341,37 +348,32 @@ nav ul li a {
     margin: 0 auto;
 }
 
-/******Reactions-Section******/
+/******Reviews-Section******/
 
-#Reactions h3, #Works h3 {
+#Reviews * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Reviews h3, #Works h3 {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 4rem 0;
 }
 
-#Reactions button {
-    display: block;
+#Reviews a.btn {
     margin: 4rem auto;
+    width: 10rem;
+    border-radius: 40px;
+    transition: all .5s;
 }
 
-#Reactions .card {
-    background-color: var(--fontColor);
-}
-
-#Reactions .card p:first-child {
-    background-color: var(--lightGray);
-    border-radius: 20px;
-    padding: .5rem 1.5rem;
-    width: 90%;
-    height: 80%;
-    margin-top: .5rem;
-}
-
-#Reactions .card .name {
-    color: var(--darkGray);
-    font-size: 1.6rem;
-    padding: 0;
+#Reviews .name, #ReviewsAll .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 /******Contact-Section******/
@@ -417,12 +419,14 @@ footer {
     align-items: center;
     width: 100%;
     height: 3.3rem;
+    border-top: 1px solid var(--fontColor);
 }
 
 footer p {
     padding: .1rem .2rem;
     border: 1px solid var(--fontColor);
     border-radius: 10px;
+    font-size: 1rem;
 }
 
 /******Form-Section******/
@@ -443,6 +447,8 @@ footer p {
     border-radius: 30px;
     border: 1px solid var(--fontColor);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all .5s;
+    z-index: 4;
 }
 
 #Form h3, #Form p {
@@ -474,6 +480,8 @@ footer p {
     height: 1.8rem;
     border-radius: 10px;
     border: 1px solid var(--lightGray);
+    color: var(--fontColor);
+    font-size: 1.1rem;
 }
 
 #Form div:nth-child(3) {
@@ -487,6 +495,8 @@ footer p {
     border-radius: 10px;
     width: 24rem;
     height: 6rem;
+    color: var(--fontColor);
+    font-size: 1.1rem;
 }
 
 #Form button {
@@ -513,13 +523,59 @@ footer p {
     top: 0;
     right: 2rem;
     background-color: transparent;
-    border: 1px solid var(--fontColor);
+    outline: 1px solid var(--darkGray);
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 10px;
 }
 
+#Form .closeBtn:hover {
+    outline: 1px solid var(--fontColor);
+}
+
 #Form .closeBtn img {
     width: 2.5rem;
     height: 2.5rem;
+}
+
+/******WorksAll-Section******/
+
+#WorksAll img {
+    width: 80%;
+    max-height: 20rem;
+}
+
+#WorksAll .cards * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#WorksAll .card {
+    background-color: var(--lightGray);
+}
+
+/******Works.html and Reviews.html******/
+
+#Worksheader, #Reviewsheader {
+    position: fixed;
+    background-color: var(--navColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid var(--fontColor);
+    width: 100vw;
+    height: 3.3rem;
+    z-index: 2;
+}
+
+#Worksheader h1, #Reviewsheader h1 {
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+
+html body .hidden {
+    left: -150% !important;
 }

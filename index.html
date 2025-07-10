@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tetoválás készítése megfizethető áron profi szinten.">
     <meta name="keywords" content="tetoválás,tetováló, tattoo, minta, készítés, budapest">
-    <title>DolfTattoo - Tetoválás Budapesten profi minőségben elérhető áron</title>
+    <meta name="author" content="[Dolf Tattoo]">
+    <title>Dolf Tattoo - Tetoválás Budapesten profi minőségben elérhető áron</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/animation.css">
@@ -20,7 +21,7 @@
                 <li><a href="#Home">Főoldal</a></li>
                 <li><a href="#AboutMe">Rólam</a></li>
                 <li><a href="#Works">Munkáim</a></li>
-                <li><a href="#Reactions">Reakciók</a></li>
+                <li><a href="#Reviews">Reakciók</a></li>
                 <li><a href="#Contact">Kapcsolat</a></li>
             </ul>
         </nav>
@@ -119,7 +120,7 @@
             <article class="works">
                 <h3>Eddigi munkáim</h3>
                 <div class="carusel">
-                    <button title="Kép vissza">
+                    <button title="Kép vissza" class="backPic">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960
                         960" width="24px" fill="#191919"><path d="m480-320 160-160-160-160-56 56 64
                         64H320v80h168l-64 64 56 56Zm0 240q-83
@@ -129,8 +130,8 @@
                         227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227
                         93Zm0-320Z"/></svg>
                     </button>
-                    <img src="./assets/images/works/0.jpg" alt="Kép egy tetoválásról">
-                    <button title="Kép előre">
+                    <img src="./assets/images/works/0.jpg" alt="Kép egy tetoválásról" id="caruselPic">
+                    <button title="Kép előre" class="forewardPic">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960
                         960" width="24px" fill="#191919"><path d="m480-320 160-160-160-160-56 56 64
                         64H320v80h168l-64 64 56 56Zm0 240q-83
@@ -141,7 +142,7 @@
                         93Zm0-320Z"/></svg>
                     </button>
                 </div>
-                <button>Mutasd mindet</button>
+                <a href="./Works.html" class="btn" target="_blank">Mutasd mindet</a>
             </article>
             <article class="data">
                 <h3>2025</h3>
@@ -174,9 +175,9 @@
             </article>
         </section>
 
-        <!--*****Reactions-Section*****-->
+        <!--*****Reviews-Section*****-->
 
-        <section id="Reactions">
+        <section id="Reviews">
             <h3>Amit a vendégeim mondanak</h3>
             <div class="cards">
                 <div class="card">
@@ -198,7 +199,7 @@
                     <p class="name">Fanni</p>
                 </div>
             </div>
-            <button>Mutasd mindet</button>
+            <a href="./reviews.html" class="btn" target="_blank">Mutasd mindet</a>
         </section>
 
         <!--*****Contact-Section*****-->
@@ -213,7 +214,7 @@
                 <p>
                     Vagy keress bátran az alábbi elérhetőségek egyikén - válaszolok, amint tudok!
                 </p>
-                <button>Üzenet</button>
+                <button class="messageBtn">Üzenet</button>
                 <div class="links">
                     <a href="#">
                         <img src="./assets/icons/facebook.svg" alt="Facebook-ikon">
@@ -270,6 +271,6 @@
     <footer>
         <p>&copy; 2025 Dolf Tattoo - Minden jog fenntartva.</p>
     </footer>
-    <script src="./js/app.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,92 @@
+
+//Dom Items
+
+const DomItems = {
+    nav: document.querySelector('nav'),
+    navBtn: document.querySelector('.navBtn'),
+    formPopUp: document.querySelector('#Form'),
+    form: document.querySelector('form'),
+    messageBtn: document.querySelector('.messageBtn'),
+    closeBtn: document.querySelector('.closeBtn'),
+    caruselPic: document.querySelector('#caruselPic'),
+    backPicBtn: document.querySelector('.backPic'),
+    forewardPicBtn: document.querySelector('.forewardPic'),
+    WorksAllBtn: document.getElementById('WorksAllBtn')
+}
+
+//Window resize monitoring
+
+function checkScreenSize() {
+    if(window.innerWidth <= 992) {
+        DomItems.nav.classList.add('hidden');
+        DomItems.navBtn.classList.remove('hidden');
+    } else {
+        DomItems.nav.classList.remove('hidden');
+        DomItems.navBtn.classList.add('hidden');
+    }
+}
+
+window.addEventListener("resize", checkScreenSize);
+window.addEventListener("DOMContentLoaded", checkScreenSize);
+
+//NavBtn open and close function
+
+if(DomItems.navBtn) {
+    DomItems.navBtn.addEventListener('click', () => {
+        DomItems.nav.classList.toggle('hidden');
+    })
+}
+
+//FormBtn open and close function
+
+if(DomItems.messageBtn) {
+    DomItems.messageBtn.addEventListener('click', () => {
+        DomItems.formPopUp.classList.remove('hidden');
+    })
+}
+
+if(DomItems.closeBtn) {
+    DomItems.closeBtn.addEventListener('click', () => {
+        DomItems.formPopUp.classList.add('hidden');
+        DomItems.form.reset();
+    })
+}
+
+//Carusel function implement
+
+let currentImgIndex = 0;
+const imagePath = './assets/images/works/';
+DomItems.caruselPic.src = `${imagePath}${currentImgIndex}.jpg`;
+
+if(DomItems.forewardPicBtn) {
+    DomItems.forewardPicBtn.addEventListener('click', () => {
+        if(currentImgIndex < 50) {
+            currentImgIndex += 1;
+            DomItems.caruselPic.src = `${imagePath}${currentImgIndex}.jpg`;
+        } else {
+            DomItems.forewardPicBtn.style.outline = '3px solid red';
+            setTimeout(() => {
+                DomItems.forewardPicBtn.style.outline = '1px solid var(--fontColor)';
+            }, 180)
+        }
+        
+    })
+}
+
+if(DomItems.backPicBtn) {
+    DomItems.backPicBtn.addEventListener('click', () => {
+        if(currentImgIndex > 0) {
+            currentImgIndex -= 1;
+            DomItems.caruselPic.src = `${imagePath}${currentImgIndex}.jpg`;
+        } else {
+            DomItems.backPicBtn.style.outline = '3px solid red';
+            setTimeout(() => {
+                DomItems.backPicBtn.style.outline = '1px solid var(--fontColor)';
+            }, 180)
+        }
+        
+    })
+}
+
+
+
