@@ -1,0 +1,78 @@
+@keyframes navAnimOpen {
+    from {top: -100%;}
+    to {top: 0;}
+}
+
+.navAnimOpen {
+    animation-name: navAnimOpen;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes navAnimClose {
+    from {top: 0;}
+    to {top: -100%;}
+}
+
+.navAnimClose {
+    animation-name: navAnimClose;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes leftAnim {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0);}
+}
+
+.leftAnim {
+    animation-name: leftAnim;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+
+.leftAnimh2 {
+    animation-name: leftAnim;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-delay: .6s;
+}
+
+.leftAnimh3 {
+    animation-name: leftAnim;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-delay: .8s;
+}
+
+@keyframes lineAnim {
+    from {width: 10%;}
+    to {width: 70%;}
+}
+
+.lineAnim {
+    animation-name: lineAnim;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-delay: .6s;
+}
+
+@keyframes opacityAnim {
+    from {opacity: 0;}
+    to {opacity: 100%;}
+}
+
+.opacityAnim {
+    animation-name: opacityAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
+}
+
+.opacity {
+    opacity: 0;
+}
+
+.transform {
+    transform: translateX(-100%);
+}
