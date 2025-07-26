@@ -574,8 +574,109 @@ footer p {
 }
 
 #Worksheader h1, #Reviewsheader h1 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: lighter;
+}
+
+#WorksAll h2, #ReviewsAll h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+}
+
+#WorksAll p, #ReviewsAll p {
+    font-size: 1.2rem;
+}
+
+#WorksAll p.name, #ReviewsAll p.name {
+    font-size: 1.2rem;
+}
+
+#WorksFile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+
+#WorksFile .carousel {
+    width: 90vw;
+    height: 80vh;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background-color: var(--lightGray);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border: 1px solid var(--fontColor);
+}
+
+#WorksFile .carousel img {
+    max-width: 90%;
+    max-height: 95%;
+}
+
+#WorksFile div.carousel .backPic {
+    position: absolute;
+    left: 10vw;
+}
+
+#WorksFile .forwardPic {
+    position: absolute;
+    right: 10vw;
+}
+
+#WorksFile .close {
+    position: absolute;
+    right: 6rem;
+    top: 6rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+#WorksFile .close svg {
+    fill: var(--darkGray);
+    transition: all .5s;
+}
+
+#WorksFile div button:first-child {
+    transform: rotate(180deg);
+}
+
+#WorksFile div button svg {
+    width: 60px !important;
+    height: 60px !important;
+    color: var(--fontColor) !important;
+}
+
+#WorksFile .btn {
+    width: 10rem;
+    border-radius: 40px;
+    transition: all .5s;
+}
+
+#WorksFile  div button svg {
+    transition: all .5s;
+}
+
+#WorksFile * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#WorksFile  div button {
+    width: 4rem;
+    transition: all .5s;
+    outline: 1px solid var(--fontColor);
+}
+
+#WorksFile div button:hover svg {
+    fill: var(--fontColor);
 }
 
 html body .hidden {

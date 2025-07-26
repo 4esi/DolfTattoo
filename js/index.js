@@ -19,7 +19,7 @@ const DomItems = {
 function checkScreenSize() {
     if(window.innerWidth <= 992) {
         DomItems.nav.classList.add('hidden');
-        DomItems.navBtn.classList.remove('hidden');
+        // DomItems.navBtn.classList.remove('hidden');
     } else {
         DomItems.nav.classList.remove('hidden');
         DomItems.navBtn.classList.add('hidden');
@@ -94,9 +94,14 @@ window.addEventListener('scroll', () => {
     if(window.scrollY > 0) {
     DomItems.nav.classList.add('navAnimOpen');
     DomItems.nav.classList.remove('navAnimClose');
+    if(window.innerWidth < 992) {
+        DomItems.navBtn.classList.remove('hidden');
+    }
+    
 } else {
     DomItems.nav.classList.remove('navAnimOpen');
     DomItems.nav.classList.add('navAnimClose');
+    DomItems.navBtn.classList.add('hidden');
 }
 })
 
