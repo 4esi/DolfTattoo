@@ -604,7 +604,6 @@ footer p {
 #WorksFile .carousel {
     width: 90vw;
     height: 80vh;
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;

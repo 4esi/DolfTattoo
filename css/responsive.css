@@ -26,6 +26,7 @@
     }
 
     /******Works-Section******/
+
     html body #Works {
         padding-left: 0;
         padding-right: 0;
@@ -195,13 +196,11 @@
 
     #Works div button:first-child {
         position: relative;
-        /* top: 40%; */
         left: 0;
     }
 
     #Works div button:last-child {
         position: relative;
-        /* top: 40%; */
         right: 0;
     }
 

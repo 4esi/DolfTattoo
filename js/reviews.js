@@ -60,5 +60,4 @@ for(let i = 0;i < reviews.length;i++) {
     `;
 
     DomItems.ReviewsAllCards.appendChild(card);
-    console.log(`most a ${i} elem tölt be`)
 }

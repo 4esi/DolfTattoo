@@ -19,7 +19,6 @@ const DomItems = {
 function checkScreenSize() {
     if(window.innerWidth <= 992) {
         DomItems.nav.classList.add('hidden');
-        // DomItems.navBtn.classList.remove('hidden');
     } else {
         DomItems.nav.classList.remove('hidden');
         DomItems.navBtn.classList.add('hidden');
@@ -112,7 +111,7 @@ const observer = new IntersectionObserver((entries) => {
         if(entry.isIntersecting) {
             entry.target.classList.add('leftAnim');
         } else {
-            entry.target.classList.remove('leftAnim'); // ha szeretnéd eltűntetni, amikor kimegy
+            entry.target.classList.remove('leftAnim');
         }
     })   
 });
@@ -126,7 +125,7 @@ const observer1 = new IntersectionObserver((entries) => {
         if(entry.isIntersecting) {
             entry.target.classList.add('opacityAnim');
         } else {
-            entry.target.classList.remove('opacityAnim'); // ha szeretnéd eltűntetni, amikor kimegy
+            entry.target.classList.remove('opacityAnim');
         }
     })   
 });
