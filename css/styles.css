@@ -631,8 +631,8 @@ footer p {
 
 #WorksFile .close {
     position: absolute;
-    right: 6rem;
-    top: 6rem;
+    right: 11vw;
+    top: 11vh;
     width: 3rem;
     height: 3rem;
 }

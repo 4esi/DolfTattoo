@@ -104,11 +104,6 @@
         width: 100%;
     }
 
-    #WorksFile .carousel img {
-        max-width: 70%;
-        max-height: 95%;
-    }
-
     #WorksFile div button {
         width: 3rem;
         height: 3rem;

@@ -29,7 +29,6 @@ for(let i = 0;i <= 50;i++) {
     imageIndex[i] = i;
 
     DomItems.WorksAllCards.appendChild(card);
-    console.log(`most a ${i}. elem került a tömb ${imageIndex[i]}. helyére`);
     card.addEventListener('click', () => openGalery(i))
 
     
