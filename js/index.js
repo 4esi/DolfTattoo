@@ -132,3 +132,16 @@ const observer1 = new IntersectionObserver((entries) => {
 
 const sections1 = document.querySelectorAll('.sectionToObserve1');
 sections1.forEach(section => observer1.observe(section));
+
+//Gmail
+
+const user = "mrdolf98";
+const domain = "gmail.com";
+const gmailHref = "mailto:" + user + "@" + domain;
+document.getElementById('gmailLink').setAttribute('href', gmailHref);
+
+//Instagram
+
+const instaLink = "https://www.instagram.com/m.rdolf?igsh=a2I2MnhqczRpczc1";
+document.getElementById('instaLink').setAttribute('href', instaLink);
+document.getElementById('instaLink').setAttribute('target', '_blank');
