@@ -11,7 +11,8 @@ const DomItems = {
     carouselPic: document.querySelector('#carouselPic'),
     backPicBtn: document.querySelector('.backPic'),
     forwardPicBtn: document.querySelector('.forwardPic'),
-    WorksAllBtn: document.getElementById('WorksAllBtn')
+    WorksAllBtn: document.getElementById('WorksAllBtn'),
+    navButtons: document.querySelectorAll('nav ul li')
 }
 
 //Window resize monitoring
@@ -19,6 +20,11 @@ const DomItems = {
 function checkScreenSize() {
     if(window.innerWidth <= 992) {
         DomItems.nav.classList.add('hidden');
+        DomItems.navButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                DomItems.nav.classList.toggle('hidden');
+            });
+        });
     } else {
         DomItems.nav.classList.remove('hidden');
         DomItems.navBtn.classList.add('hidden');

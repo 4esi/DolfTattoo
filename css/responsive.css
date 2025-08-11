@@ -60,6 +60,20 @@
 @media (max-width: 768px) {
 
     #Works .works div {
+        width: 95vw;
+    }
+
+    #Works div button:first-child {
+        position: absolute;
+        left: 2.5vw;
+    }
+
+    #Works div button:last-child {
+        position: absolute;
+        right: 2.5vw;
+    }
+
+    #Works .works .carousel img {
         width: 100%;
     }
 
@@ -190,23 +204,23 @@
     /******Works-Section******/
 
     #Works div button:first-child {
-        position: relative;
-        left: 0;
+        position: absolute;
+        left: 3.5vw;
     }
 
     #Works div button:last-child {
-        position: relative;
-        right: 0;
+        position: absolute;
+        right: 3.5vw;
     }
 
     #Works div img {
-        width: 60%;
+        width: 100%;
     }
 
     html body #Works .works .carusel {
         padding: 0;
         width: 95vw;
-        height: 60vh;
+        height: auto;
     }
 
     /******Contact-Section******/
@@ -229,10 +243,10 @@
     /******Form-Section******/
 
     #Form {
-        width: 90vw;
-        height: 90vh;
-        left: 3vw;
-        top: 5vh;
+        width: 95vw;
+        height: 80vh;
+        left: 2.5vw;
+        top: 10dvh;
     }
 
     #Form h3 {
@@ -250,5 +264,19 @@
     #Form div:nth-child(3) textarea {
         width: 16rem;
         height: 4rem;
+    }
+
+    /******WorksFile-Section******/
+
+    #WorksFile .carousel #carouselPic {
+        width: 100% !important;
+    }
+
+    #WorksFile .close {
+        top: 5vh;
+    }
+
+    footer p {
+        width: 95%;
     }
 }
